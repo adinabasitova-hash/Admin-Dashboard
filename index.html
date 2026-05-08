@@ -8,31 +8,66 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <div class="comtainer">
+    <div class="container">
     <div class="sidebar">
-      <h3>Dashboard</h3>
+      <h3 class="dashboard">
+        <img src="dashboard.svg">
+        Dashboard
+      </h3>
       <ul class="needed">
-        <li>Home</li>
-        <li>Profile</li>
-        <li>Messages</li>
-        <li>History</li>
-        <Li>Tasks</Li>
-        <li>Communities</li>
+        
+        <li>
+          <img src="home.svg">
+          Home
+        </li>
+        <li>
+          <img src="profile.svg">
+          Profile
+        </li>
+        <li>
+          <img src="message.svg">
+          Messages
+        </li>
+        <li>
+          <img src="history.svg">
+          History
+        </li>
+        <li>
+          <img src="tasks.svg">
+          Tasks
+        </li>
+        <li>
+          <img src="community.svg">
+          Communities
+        </li>
       </ul>
 
       <ul class="support">
-        <li>Settings</li>
-        <li>Support</li>
-        <li>Privacy</li>
+        <li>
+          <img src="settings.svg">
+          Settings
+        </li>
+        <li>
+          <img src="help.svg">
+          Support
+        </li>
+        <li>
+          <img src="privacy.svg">
+          Privacy
+        </li>
       </ul>
     </div>
 
     <div class="header">
       <div class="top">
+        <img class="search" src="magnify.svg">
         <input type="text" class="inp-el">
         <div class="info">
-        <img src="cat.png">
-        <h5>Morgan Oakley</h5>
+        <h5>
+          <img class="bell" src="bell.svg">
+          <img src="cat.png">
+          Morgan Oakley
+        </h5>
         </div>
       </div>
       <div class="pfp">
@@ -41,7 +76,7 @@
           <h6>Hi there,</h6>
           <h3>Morgan Oakley (@morgan)</h3>
         </div>
-        <div>
+        <div class="nav">
           <button>New</button>
           <button>Upload</button>
           <button>Share</button>
@@ -49,67 +84,84 @@
       </div>
     </div>
 
-    <h5>Your projects</h5>
+    <div class="projects section">
+      <h3>Your projects</h3>
     <div class="main">
+      
       <div>
-        <h5>Super Cool Project</h5>
+        <h4>Super Cool Project</h4>
         <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.  </p>
       </div>
       <div>
-        <h5>Less Cool Project</h5>
+        <h4>Less Cool Project</h4>
         <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat.</p>
       </div>
       <div>
-        <h5>Impossible App</h5>
+        <h4>Impossible App</h4>
         <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p> 
       </div>
       <div>
-        <h5>Easy Peasy App</h5>
+        <h4>Easy Peasy App</h4>
         <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat.</p>
       </div>
       <div>
-        <h5>Ad Blocker</h5>
+        <h4>Ad Blocker</h4>
         <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
       </div>
       <div>
-        <h5>Money Maker</h5>
+        <h4>Money Maker</h4>
         <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat.</p>
       </div>
-      
+      </div>
     </div>
     <div class="newest">
-      <h4>Anoouncements</h4>
+      <h3>Annoncement</h3>
       <div>
-        <h5>Site Maintenance</h5>
+        <h4>Site Maintenance</h4>
         <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
-        <h5>Community Share Day</h5>
+        <h4>Community Share Day</h4>
         <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
-        <h5>Update Privacy Policy</h5>
+        <h4>Update Privacy Policy</h4>
         <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
       </div>
+      <h3>Trending</h3>
 
-      <h4>Trending</h4>
-      <div>
-        <img src="">
-        <div class="user">
-          <p>@tegan</p>
-          <p>World Peace Builder</p>
-        </div>
-        <img src="">
-        <div class="user">
-          <p>@morgan</p>
-          <p>Super Cool Project</p>
-        </div>
-        <img src="">
-        <div>
-          <p>@kendall</p>
-          <p>Life Changing App</p>
-        </div>
-        <img src="">
-        <p>@alex</p>
-        <p>No Traffic Maker</p>
-      </div>
+<div class="trend">
+
+  <div class="trend-user">
+    <img src="tegan.png">
+    <div class="user">
+      <p>@tegan</p>
+      <p>World Peace Builder</p>
     </div>
+  </div>
+
+  <div class="trend-user">
+    <img src="cat.png">
+    <div class="user">
+      <p>@morgan</p>
+      <p>Super Cool Project</p>
+    </div>
+  </div>
+
+  <div class="trend-user">
+    <img src="kendall.png">
+    <div class="user">
+      <p>@kendall</p>
+      <p>Life Changing App</p>
+    </div>
+  </div>
+
+  <div class="trend-user">
+    <img src="alex.png">
+    <div class="user">
+      <p>@alex</p>
+      <p>No Traffic Maker</p>
+    </div>
+  </div>
+
+</div>
+      
     </div>
   </body>
 </html>
