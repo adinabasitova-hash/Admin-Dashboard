@@ -1,172 +1,202 @@
-.container{
-  display:grid;
-  grid-template-columns: 25% 50% 25%;
-  grid-template-rows:20% 80%;
-  min-height: 100vh;
-  gap:1rem
-  
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
+body {
+  margin: 0;
+  font-family: system-ui;
+  background-color: rgb(236, 227, 227);
+  font-size: 21px;
 }
-.sidebar{
-  grid-column:1;
-  grid-row:1/-1;
-  background-color:rgb(74, 100, 183);
-  color:white;
-  font-size:2rem;
-  font-weight:bold
-  
+
+img {
+  max-width: 100%;
 }
-body{
- 
-  font-family:system-ui;
-  background-color:rgb(236, 227, 227);
-  font-size:21px
+
+/* ---------- Основная сетка ---------- */
+.container {
+  display: grid;
+  grid-template-columns: minmax(200px, 260px) minmax(0, 1fr) minmax(220px, 300px);
+  grid-template-rows: auto 1fr;
+  min-height: 100vh;
+  gap: 1rem;
 }
+
+/* ---------- Сайдбар ---------- */
+.sidebar {
+  grid-column: 1;
+  grid-row: 1 / -1;
+  background-color: rgb(74, 100, 183);
+  color: white;
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  font-weight: bold;
+  padding: 1rem;
+}
+
 ul {
-list-style-type: none;
-display:flex;
-  gap:1rem;
-  flex-direction: column
+  list-style-type: none;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  padding-left: 0;
 }
-.needed{
-  margin-bottom:4rem
+
+.needed {
+  margin-bottom: 3rem;
 }
+
 .sidebar li {
   display: flex;
   align-items: center;
-  gap: 3rem;
+  gap: 1rem;
 }
-li img{
-  width:2rem;
-  padding-bottom:0;
+
+li img {
+  width: 2rem;
+  flex-shrink: 0;
   filter: invert(1);
 }
-.dashboard{
-  display:flex;
-  margin-bottom:4rem;
-  font-size: 3rem;
-  gap:1.5rem
 
-  
-}
-.dashboard img{
-  width:3rem;
-  filter:invert(1);
-  margin-left:2rem
-}
-.header{
-  grid-column: 2/span 3;
-  grid-row:1;
-
-  background-color:rgb(240, 240, 164)
-}
-.top img{
-  width:3rem;
-  border-radius:90px;
-  position:relative;
-  top:20px;
-  margin-right:1rem
-}
-
-.top{
-  display:flex;
- margin-bottom:4rem;
- margin-top:4rem;
+.dashboard {
+  display: flex;
   align-items: center;
-  justify-content: space-between;
-  height:2rem;
-  margin-left: 3rem
+  margin-bottom: 3rem;
+  font-size: clamp(1.4rem, 2vw, 1.9rem);
+  gap: 1rem;
 }
-.info{
-  display:flex;
-  flex-direction:row;
-  justify-content:flex-end;
-  margin-right:2rem;
-  transform:translateY(-15%)
-  
+
+.dashboard img {
+  width: 3rem;
+  flex-shrink: 0;
+  filter: invert(1);
 }
-.top input{
-  border:rgb(183, 182, 182);
-  border-radius:20px;
-   width: 50rem;
-   padding:1rem;
-   position:absolute;
-   margin-left:2rem
+
+/* ---------- Шапка ---------- */
+.header {
+  grid-column: 2 / -1;
+  grid-row: 1;
+  background-color: rgb(240, 240, 164);
+  padding: 1rem 2rem;
 }
+
+.top {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.top img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.top .search {
+  width: 1.5rem;
+  height: auto;
+  border-radius: 0;
+  flex-shrink: 0;
+}
+
+.top input {
+  flex: 1;
+  min-width: 0;
+  max-width: 30rem;
+  border: 1px solid rgb(183, 182, 182);
+  border-radius: 20px;
+  padding: 0.75rem 1rem;
+}
+
+.info {
+  margin-left: auto;
+}
+
+.info h5 {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.top .bell {
+  width: 1.5rem;
+  height: auto;
+  border-radius: 0;
+}
+
+.pfp {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+
 .pfp img {
   width: 5rem;
   height: 5rem;
   border-radius: 50%;
   object-fit: cover;
 }
-.search{
-  width:-2rem;
-  position:absolute;
-  left:-3%;
-  transform:translateX(-50%);
-  transform:translateY(-25%);
-  
 
+.pfp h6 {
+  margin-bottom: 0;
 }
-.bell{
-width:.3rem;
-transform:translateX(-50%);
 
+.pfp h3 {
+  margin-top: 5px;
 }
-.pfp{
-  margin-left:1rem;
-  display:flex;
-  align-items:center;
-  gap:1rem;
-}
-.pfp h6{
-  margin-bottom:0
-}
-.pfp h3{
-  margin-top:5px
-}
-.nav{
-  display:flex;
-  gap:2rem;
-position:relative;
-  transform:translateX(141%);
-  top:1rem;
-  
-}
-.nav button{
-  padding:1rem;
-  background-color:rgb(116, 216, 116);
-  color:white;
-  border:none;
-  border-radius:89px;
-  width:7rem
-}
-.main{
-  grid-column:2;
-  grid-row:2;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  column-gap:1px;
-  row-gap:1px;
-  font-size:21px;
-   gap:1rem
-  
-}
-.main div{
-  border-radius:10px;
-  background-color:white;
-  width:1fr;
-  height:20rem;
-  box-shadow: inset .5em 0em gold;
-  padding-left:1.5rem;
-  padding-right:2rem;
-  padding-top:1rem;
- 
 
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-left: auto;
 }
-.newest{
-  grid-column:3
+
+.nav button {
+  padding: 1rem;
+  background-color: rgb(116, 216, 116);
+  color: white;
+  border: none;
+  border-radius: 89px;
+  width: 7rem;
 }
+
+/* ---------- Проекты ---------- */
+.projects {
+  grid-column: 2;
+  grid-row: 2;
+  min-width: 0;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  font-size: 21px;
+}
+
+.main div {
+  border-radius: 10px;
+  background-color: white;
+  height: auto;
+  min-height: 12rem;
+  box-shadow: inset 0.5em 0 gold;
+  padding: 1rem 2rem 1rem 1.5rem;
+}
+
+/* ---------- Правая колонка ---------- */
+.newest {
+  grid-column: 3;
+  grid-row: 2;
+  min-width: 0;
+}
+
 .newest > div {
   display: flex;
   flex-direction: column;
@@ -175,18 +205,11 @@ position:relative;
   border-radius: 10px;
 }
 
-
- .newest p{
-  margin-top:0
- }
- 
- .projects-section{
-  grid-column:2;
-  grid-row:2;
+.newest p {
+  margin-top: 0;
 }
+
 .trend {
-  height: auto !important;
-  flex-direction: column;
   gap: 2rem;
 }
 
@@ -195,15 +218,66 @@ position:relative;
   flex-direction: row;
   align-items: center;
   gap: 1rem;
-  height: auto !important;
 }
 
-.trend-user img{
-  width:4rem;
-  height:4rem;
-  border-radius:50%;
-  object-fit:cover;
+.trend-user img {
+  width: 4rem;
+  height: 4rem;
+  flex-shrink: 0;
+  border-radius: 50%;
+  object-fit: cover;
 }
-.trend-user p{
-  margin:5px
+
+.trend-user p {
+  margin: 5px;
+}
+
+/* ---------- Планшет: правая колонка уходит вниз ---------- */
+@media (max-width: 1100px) {
+  .container {
+    grid-template-columns: minmax(180px, 240px) minmax(0, 1fr);
+    grid-template-rows: auto auto auto;
+  }
+
+  .sidebar {
+    grid-row: 1 / -1;
+  }
+
+  .header,
+  .projects,
+  .newest {
+    grid-column: 2;
+  }
+
+  .header { grid-row: 1; }
+  .projects { grid-row: 2; }
+  .newest { grid-row: 3; }
+}
+
+/* ---------- Телефон: всё в одну колонку ---------- */
+@media (max-width: 700px) {
+  .container {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: none;
+  }
+
+  .sidebar,
+  .header,
+  .projects,
+  .newest {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .header {
+    padding: 1rem;
+  }
+
+  .nav {
+    margin-left: 0;
+  }
+
+  .main {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }
